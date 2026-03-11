@@ -3,7 +3,7 @@ export function initAnimations() {
     if (typeof gsap === 'undefined') {
         console.warn('GSAP not loaded');
         // Fallback: make everything visible if GSAP fails
-        document.querySelectorAll('.hero__subtitle, .hero__title, .hero__description, .hero__actions, .highlight-item, .section__header, .service-card, .gallery-item').forEach(el => {
+        document.querySelectorAll('.hero__subtitle, .hero__title, .hero__description, .hero__actions, .highlight-item, .section__header').forEach(el => {
             el.style.opacity = '1';
             el.style.transform = 'none';
             el.style.visibility = 'visible';
@@ -75,43 +75,42 @@ export function initAnimations() {
         );
     });
 
-    // Services Cards
-    // Using a timeline bound to the grid trigger is cleaner than individual triggers
-    const servicesTl = gsap.timeline({
-        scrollTrigger: {
-            trigger: '.services__grid',
-            start: 'top 80%',
-            toggleActions: 'play none none reverse'
-        }
-    });
+    // Services Cards - REMOVED ANIMATION (Requested by user)
+    // const servicesTl = gsap.timeline({
+    //     scrollTrigger: {
+    //         trigger: '.services__grid',
+    //         start: 'top 80%',
+    //         toggleActions: 'play none none reverse'
+    //     }
+    // });
 
-    servicesTl.fromTo('.service-card', 
-        { y: 50, autoAlpha: 0 },
-        {
-            y: 0,
-            autoAlpha: 1,
-            duration: 0.8,
-            stagger: 0.1,
-            onComplete: () => {
-                // Clear transform to allow CSS hover effects (translateY) to work
-                gsap.set('.service-card', { clearProps: 'transform' });
-            }
-        }
-    );
+    // servicesTl.fromTo('.service-card', 
+    //     { y: 50, autoAlpha: 0 },
+    //     {
+    //         y: 0,
+    //         autoAlpha: 1,
+    //         duration: 0.8,
+    //         stagger: 0.1,
+    //         onComplete: () => {
+    //             // Clear transform to allow CSS hover effects (translateY) to work
+    //             gsap.set('.service-card', { clearProps: 'transform' });
+    //         }
+    //     }
+    // );
 
-    // Gallery
-    gsap.fromTo('.gallery-item', 
-        { scale: 0.9, autoAlpha: 0 },
-        {
-            scrollTrigger: {
-                trigger: '.gallery-grid',
-                start: 'top 75%',
-                toggleActions: 'play none none reverse'
-            },
-            scale: 1,
-            autoAlpha: 1,
-            duration: 0.8,
-            stagger: 0.1
-        }
-    );
+    // Gallery - REMOVED ANIMATION (Requested by user)
+    // gsap.fromTo('.gallery-item', 
+    //     { scale: 0.9, autoAlpha: 0 },
+    //     {
+    //         scrollTrigger: {
+    //             trigger: '.gallery-grid',
+    //             start: 'top 75%',
+    //             toggleActions: 'play none none reverse'
+    //         },
+    //         scale: 1,
+    //         autoAlpha: 1,
+    //         duration: 0.8,
+    //         stagger: 0.1
+    //     }
+    // );
 }
