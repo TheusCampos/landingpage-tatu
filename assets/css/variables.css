@@ -1,0 +1,36 @@
+:root {
+  /* Colors */
+  --primary-color: #c5a47e; /* Copper/Gold accent from reference */
+  --primary-dark: #a88b67;
+  --primary-light: #dcc09e;
+  
+  --bg-color: #0b0b0b; /* Deep dark background */
+  --secondary-bg: #151515; /* Slightly lighter for cards/sections */
+  --tertiary-bg: #1e1e1e;
+  
+  --text-color: #ffffff;
+  --text-muted: #9ca3af;
+  --text-dark: #111111;
+  
+  --success: #10b981;
+  --warning: #f59e0b;
+  --error: #ef4444;
+
+  /* Typography */
+  --font-primary: 'Oswald', sans-serif; /* Structural titles */
+  --font-body: 'Inter', 'Helvetica Neue', Arial, sans-serif; /* Body text */
+  --font-accent: 'Permanent Marker', cursive; /* Artistic highlights */
+
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 4rem;
+  --spacing-xl: 6rem;
+  --spacing-standard: 6rem; /* Standard section padding */
+  
+  /* Borders & Radius */
+  --border-color: #333333;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+}

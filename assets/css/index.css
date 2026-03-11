@@ -1,0 +1,17 @@
+@import url('./variables.css');
+@import url('./global/reset.css');
+@import url('./global/base.css');
+@import url('./global/utilities.css');
+@import url('./pages/partials/hero-section.css');
+@import url('./pages/partials/about-section.css');
+@import url('./pages/partials/services-section.css');
+@import url('./pages/partials/works-section.css');
+@import url('./pages/partials/team-section.css');
+@import url('./pages/partials/testimonials-section.css');
+@import url('./pages/partials/contact-section.css');
+
+.permanent-marker-regular {
+    font-family: 'Permanent Marker', cursive;
+    font-weight: 400;
+    font-style: normal;
+}
