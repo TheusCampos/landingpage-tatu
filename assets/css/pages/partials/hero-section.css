@@ -2,11 +2,11 @@
     position: relative;
     height: 100vh;
     min-height: 800px;
-    background-image: url('../../../imagens/banner_tatu.jpg'); /* Fallback */
+    background-image: url('../../../img/banner_tatu.jpg'); /* Fallback */
     background: 
         linear-gradient(to bottom, transparent 70%, var(--bg-color) 100%),
         linear-gradient(to right, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.7) 50%, rgba(0,0,0,0.4) 100%),
-        url('../../../imagens/banner_tatu.jpg');
+        url('../../../img/banner_tatu.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
